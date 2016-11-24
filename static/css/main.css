@@ -1,5 +1,5 @@
 body {
-  background-color: #F09696;
+  background-color: #E64B5F;
 }
 
 .side-nav.fixed {
@@ -8,10 +8,11 @@ body {
   position: fixed;
   left: 0;
   overflow: hidden;
+  width: 300px !important;
 }
 
 header, main, footer {
-      padding-left: 300px;
+  padding-left: 300px;
 }
 
 @media only screen and (max-width : 992px) {
@@ -35,6 +36,7 @@ li {
   margin-bottom: 30px;
   position: relative;
   box-shadow: 3px;
+  padding-right: 10px !important;
 }
 
 #logo-container {
@@ -62,11 +64,11 @@ li {
   background-color: #FFFFFF !important;
   border-bottom: none !important;
   padding: 12px 20px;
-  width: 274px;
   box-sizing: border-box !important;
   margin: 8px 0;
   padding: 0 5px !important;
   box-sizing: border-box;
+  border-radius: 2px !important;
 }
 
 input:focus {
@@ -88,12 +90,13 @@ input:focus {
 #customer-content {
   position: relative;
   top: 50px;
-  left: -40px;
+  right: 70px;
 }
 
 #account-information {
   position: relative;
   top: 50px;
+  left: 40px;
 }
 
 .card {
@@ -104,7 +107,7 @@ input:focus {
 #feedback {
   position: relative;
   top: 50px;
-  left: -40px;
+  right: 70px;
 }
 
 .row {
@@ -114,6 +117,7 @@ input:focus {
 #transaction-history {
   position: relative;
   top: 50px;
+  left: 40px;
 }
 
 .collapsible {
@@ -125,6 +129,35 @@ input:focus {
   position: relative;
 }
 
-.em {
+td:first-child {
+  font-weight: bold;
+}
 
+.emoji {
+  width: 20px;
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.desc {
+  display: inline-block;
+}
+
+.amount {
+  display: inline-block;
+  float: right;
+  padding-top: 5px;
+}
+
+#balance {
+  float: right;
+}
+
+.container {
+  width: 80% !important;
+}
+
+.collapsible-body {
+  background-color: white;
 }

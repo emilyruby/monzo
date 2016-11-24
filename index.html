@@ -11,7 +11,6 @@
     </hgroup>
   </head>
   <body>
-    <div id="app">
       <header>
         <ul id="nav-mobile" class="side-nav fixed">
           <li class="logo">
@@ -35,11 +34,30 @@
                 <div class="card" id="customer-content">
                   <div class="card-content">
                     <span class="card-title">Customer Information</span>
-                    <p>Name:</p>
-                    <p>Street Address:</p>
-                    <p>Date of Birth:</p>
-                    <p>Email:</p>
-                    <p>Phone Number:</p>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Name:</td>
+                          <td id="name"></td>
+                        </tr>
+                        <tr>
+                          <td>Phone Number:</td>
+                          <td id="phone"></td>
+                        </tr>
+                        <tr>
+                          <td>Address:</td>
+                          <td id="address"></td>
+                        </tr>
+                        <tr>
+                          <td>Email::</td>
+                          <td id="email"></td>
+                        </tr>
+                        <tr>
+                          <td>Date of Birth:</td>
+                          <td id="dob"></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -57,7 +75,14 @@
                 <div class="card" id="account-information">
                   <div class="card-content">
                     <span class="card-title">Account Information</span>
-                    <p>Balance:</p>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>Balance:</td>
+                            <td id="balance"></td>
+                          </tr>
+                        </tbody>
+                      </table>
                   </div>
                 </div>
               </div>
@@ -66,17 +91,15 @@
                   <div class="card-content">
                     <span class="card-title">Transaction History</span>
                     <p>Filler</p>
-                    <ul class="collapsible popout" data-collapsible="accordion">
+                    <ul class="collapsible popout" id="transactions" data-collapsible="accordion">
                       <li>
                         <div class="collapsible-header">
                           <div class="emoji"></div>
-                          DESCRIPTION
+                          <div class="desc"></div>
                           <div class="amount"></div>
                         </div>
                         <div class="collapsible-body">
-                          <p>
-                            <button id="testtest123"></button>
-                          </p>
+                          <p></p>
                         </div>
                       </li>
                     </ul>
@@ -86,7 +109,6 @@
             </div>
           </div>
         </div>
-      </div>
     </main>
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -94,6 +116,7 @@
       crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="static/js/currency.js"></script>
     <script type="text/javascript" src="static/js/main.js"></script>
     <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.2.2"></script>
   </body>
