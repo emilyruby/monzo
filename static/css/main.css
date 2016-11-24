@@ -81,3 +81,19 @@ input:focus {
   right: 10px;
   top: 10px;
 }
+
+#customer-content {
+  position: relative;
+  top: 50px;
+  left: -40px;
+}
+
+#account-information {
+  position: relative;
+  top: 50px;
+}
+
+.card {
+  background-color: #1E788C !important;
+  color: white;
+}
