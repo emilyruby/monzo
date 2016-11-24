@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>me</title>
@@ -7,52 +7,80 @@
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous">
-    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.6/assets/css/emojione.min.css" rel="stylesheet">
+    </hgroup>
   </head>
   <body>
-    <header>
-      <ul id="nav-mobile" class="side-nav fixed">
-        <li class="logo">
-          <a id="logo-container" href="https://monzo.com/" class="brand-logo">
-            <img id="front-page-logo" src="static/images/mondo.png">
-          </a>
-        </li>
-        <li class="search">
-          <div class="search-wrapper card">
-            <input id="search">
-            <i class="material-icons">search</i>
-          </div>
-        </li>
-      </ul>
-    </header>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col s6 m6 l6">
-            <div class="row">
-              <div class="card" id="customer-content">
-                <div class="card-content">
-                  <span class="card-title">Customer Information</span>
-                  <p>First Name:</p>
-                  <p>Surname:</p>
-                  <p>Street Address:</p>
-                  <p>Date of Birth:</p>
-                  <p>Email:</p>
-                  <p>Phone Number:</p>
+    <div id="app">
+      <header>
+        <ul id="nav-mobile" class="side-nav fixed">
+          <li class="logo">
+            <a id="logo-container" href="https://monzo.com/" class="brand-logo">
+              <img id="front-page-logo" src="static/images/mondo.png">
+            </a>
+          </li>
+          <li class="search">
+            <div class="search-wrapper card">
+              <input id="search">
+              <i class="material-icons">search</i>
+            </div>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col s6">
+              <div class="row">
+                <div class="card" id="customer-content">
+                  <div class="card-content">
+                    <span class="card-title">Customer Information</span>
+                    <p>Name:</p>
+                    <p>Street Address:</p>
+                    <p>Date of Birth:</p>
+                    <p>Email:</p>
+                    <p>Phone Number:</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card" id="feedback">
+                  <div class="card-content">
+                    <span class="card-title">Feedback</span>
+                    <p>Filler</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col s6 m6 l6">
-            <div class="row">
-              <div class="card" id="account-information">
-                <div class="card-content">
-                  <span class="card-title">Account Information</span>
-                  <p>Balance:</p>
+            <div class="col s6">
+              <div class="row">
+                <div class="card" id="account-information">
+                  <div class="card-content">
+                    <span class="card-title">Account Information</span>
+                    <p>Balance:</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card" id="transaction-history">
+                  <div class="card-content">
+                    <span class="card-title">Transaction History</span>
+                    <p>Filler</p>
+                    <ul class="collapsible popout" data-collapsible="accordion">
+                      <li>
+                        <div class="collapsible-header">
+                          <div class="emoji"></div>
+                          DESCRIPTION
+                          <div class="amount"></div>
+                        </div>
+                        <div class="collapsible-body">
+                          <p>
+                            <button id="testtest123"></button>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -60,7 +88,13 @@
         </div>
       </div>
     </main>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script type="text/javascript" src="static/js/sidebar.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+    <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.2.2"></script>
   </body>
 </html>
