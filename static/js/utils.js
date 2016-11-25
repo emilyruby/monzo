@@ -15,3 +15,5 @@ var currency_symbols = {
     'UAH': '₴', // Ukrainian Hryvnia
     'VND': '₫', // Vietnamese Dong
 };
+
+var monzo = "<img src=\"https://cdn-business2.discourse.org/uploads/getmondo/_emoji/mondo.png?v=3\" title=\":mondo:\" class=\"emoji\" alt=\":mondo:\">";

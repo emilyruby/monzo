@@ -65,7 +65,42 @@
                 <div class="card" id="feedback">
                   <div class="card-content">
                     <span class="card-title">Feedback</span>
-                    <p>Filler</p>
+                    <div id="feedback_form">
+                      <form id="feedback_areas" action="#">
+                       <p>
+                         <input type="checkbox" class="filled-in" id="categorisation" />
+                         <label for="categorisation">Incorrect Categorisation</label>
+                       </p>
+                       <p>
+                         <input type="checkbox" class="filled-in" id="merchant_issue" />
+                         <label for="merchant_issue">Wrong Merchant Name</label>
+                       </p>
+                       <p>
+                         <input type="checkbox" class="filled-in" id="transfer" />
+                         <label for="transfer">Money Transfer Issues</label>
+                       </p>
+                       <p>
+                         <input type="checkbox" class="filled-in" id="verification" />
+                         <label for="verification">Verification Problems</label>
+                       </p>
+                      <div class="file-field input-field">
+                        <div class="btn">
+                          <span>File</span>
+                          <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text">
+                        </div>
+                      </div>
+                      <div class="input-field">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Issue Details</label>
+                      </div>
+                      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                      </button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,6 +116,9 @@
                             <td>Balance:</td>
                             <td id="balance"></td>
                           </tr>
+                          <tr>
+                            <td>Account ID:</td>
+                            <td id="account_id"></td>
                         </tbody>
                       </table>
                   </div>
@@ -90,18 +128,7 @@
                 <div class="card" id="transaction-history">
                   <div class="card-content">
                     <span class="card-title">Transaction History</span>
-                    <p>Filler</p>
                     <ul class="collapsible popout" id="transactions" data-collapsible="accordion">
-                      <li>
-                        <div class="collapsible-header">
-                          <div class="emoji"></div>
-                          <div class="desc"></div>
-                          <div class="amount"></div>
-                        </div>
-                        <div class="collapsible-body">
-                          <p></p>
-                        </div>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -116,7 +143,7 @@
       crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script type="text/javascript" src="static/js/currency.js"></script>
+    <script type="text/javascript" src="static/js/utils.js"></script>
     <script type="text/javascript" src="static/js/main.js"></script>
     <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.2.2"></script>
   </body>

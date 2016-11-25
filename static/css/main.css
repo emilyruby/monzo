@@ -1,5 +1,5 @@
 body {
-  background-color: #E64B5F;
+  background-color: #F5F5F5;
 }
 
 .side-nav.fixed {
@@ -77,8 +77,6 @@ input:focus {
 }
 
 .search {
-  display: block;
-  margin: 0 !important;
 }
 
 .search-wrapper > i {
@@ -89,13 +87,13 @@ input:focus {
 
 #customer-content {
   position: relative;
-  top: 50px;
+  top: 20px;
   right: 70px;
 }
 
 #account-information {
   position: relative;
-  top: 50px;
+  top: 20px;
   left: 40px;
 }
 
@@ -106,8 +104,9 @@ input:focus {
 
 #feedback {
   position: relative;
-  top: 50px;
+  top: 15px;
   right: 70px;
+  bottom: 15px;
 }
 
 .row {
@@ -115,9 +114,11 @@ input:focus {
 }
 
 #transaction-history {
-  position: relative;
-  top: 50px;
+  position: relative;;
+  top: 30px;
   left: 40px;
+  bottom: 15px;
+  overflow: scroll !important;
 }
 
 .collapsible {
@@ -160,4 +161,13 @@ td:first-child {
 
 .collapsible-body {
   background-color: white;
+}
+
+#feedback_areas > p > label {
+  color: #FFFFFF;
+}
+
+#feedback_areas {
+  padding: 5px;
+  background-color: #1f3152;
 }

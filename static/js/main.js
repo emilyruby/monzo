@@ -20,44 +20,76 @@ function fill_accountinfo_table(data) {
   var balance = data.items[0].transaction.account_balance;
   var curr = data.items[0].transaction.currency;
   $("#balance").text(currency_symbols[curr] + balance);
+  var id = data.items[0].transaction.account_id;
+  console.log(id);
+  $("account_id").append(id);
 }
 
 function transaction_history(data) {
-  for (var i = 0; i < 10; i++) {
-    create_card(data);
-    // console.log(String(i) + "/" + String(data.items.length));
-    // var amount = Math.abs(data.items[i].transaction.amount);
-    // var curr = data.items[i].transaction.currency;
-    // $(".amount").text(currency_symbols[curr] + amount);
-    // var emoji = "";
-    // try {
-    //   emoji = data.items[i].transaction.merchant.emoji;
-    // } catch(err) {
-    //   console.log(err);
-    // }
-    // if (emoji !== ""){
-    //   $(".emoji").append(twemoji.
-    //     parse(data.items[i].transaction.merchant.emoji));
-    // }
-    // var description = data.items[i].transaction.description
-    // var cut = description.substr(0,description.indexOf('   '));
-    // $(".desc").text(cut);
-  }
+  for (var i = 0; i < 15; i++) {
 
+    var emoji = "";
+    try {
+      emoji = data.items[i].transaction.merchant.emoji;
+      if (emoji !== ""){
+        emoji = twemoji.parse(data.items[i].transaction.merchant.emoji);
+      }
+    } catch(err) {
+      console.log(err);
+    } finally {
+
+      var amount = Math.abs(data.items[i].transaction.amount);
+      var curr = data.items[i].transaction.currency;
+      amount = currency_symbols[curr] + amount;
+
+      console.log(name, emoji);
+      if (check_transaction(data, i)){
+        emoji = monzo;
+        var name = data.items[i].transaction.description;
+        var merchant_address = "N/A";
+        create_card(emoji, name, amount, merchant_address);
+      } else {
+        var name = data.items[i].transaction.merchant.name;
+        var merchant_address = data.items[i].transaction
+                                  .merchant.address.short_formatted;
+        create_card(emoji, name, amount, merchant_address);
+      }
+    }
+  }
 }
 
-function create_card(data){
+function check_transaction(data, i) {
+  if (data.items[i].transaction.amount > 0) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+function create_card(emoji, cut, amount, merchant_address){
   $('#transactions').append(
     $("<li>").append(
       $('<div>').attr('class', 'collapsible-header').append(
-        $('<div>').attr('class', 'emoji')).append(
-          $('<div>').attr('class', 'desc')).append(
-            $('<div>').attr('class', 'amount')
-          )
-        ).append(
-          $('<div>').attr('class', 'collapsible-body').append(
-            $('<p>')
+        $('<div>').attr('class', 'emoji').append(emoji))
+        .append(
+          $('<div>').attr('class', 'desc').text(cut))
+          .append(
+            $('<div>').attr('class', 'amount').text(amount)
           )
         )
-  );
+        .append(
+          $('<div>').attr('class', 'collapsible-body')
+        ).append(
+          $('<table>'))
+          .append(
+            $('<tbody>').append(
+              $('<tr>').append(
+                $('<td>').text("Merchant Address:")
+              )
+              .append(
+                $('<td>').text(merchant_address)
+              )
+                )
+              )
+            );
 }
