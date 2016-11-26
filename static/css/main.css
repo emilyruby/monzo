@@ -1,16 +1,18 @@
 body {
-  background-color: #F5F5F5;
+  background-color: #1E788C;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;;
 }
 
 .side-nav.fixed {
-  background-color: #144673 !important;
+  background-color: #50B9DC !important;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2) !important;
   position: fixed;
   left: 0;
-  overflow: hidden;
   width: 300px !important;
 }
 
+/*ensures sidebar space is left undisturbed*/
 header, main, footer {
   padding-left: 300px;
 }
@@ -44,7 +46,6 @@ li {
 }
 
 #nav-mobile li.search .search-wrapper {
-  width: auto !important;
   margin-left: 13px;
   margin-right: 13px;
 }
@@ -60,7 +61,6 @@ li {
 }
 
 .search-wrapper > input {
-  position: absolute;
   background-color: #FFFFFF !important;
   border-bottom: none !important;
   padding: 12px 20px;
@@ -73,22 +73,21 @@ li {
 
 input:focus {
   border-bottom: none;
+  color: #000000;
   box-shadow: 2px 5px 2px #000000;
 }
 
-.search {
-}
-
 .search-wrapper > i {
-  line-height: 1;
+  position: absolute;
   right: 10px;
   top: 10px;
+  color: #000000;
 }
 
 #customer-content {
   position: relative;
   top: 20px;
-  right: 70px;
+  right: 50px;
 }
 
 #account-information {
@@ -98,15 +97,17 @@ input:focus {
 }
 
 .card {
-  background-color: #1E788C !important;
+  background-color: #E64B5F !important;
   color: white;
 }
 
 #feedback {
   position: relative;
   top: 15px;
-  right: 70px;
+  right: 50px;
   bottom: 15px;
+  overflow: scroll;
+  height: 460px;
 }
 
 .row {
@@ -114,11 +115,11 @@ input:focus {
 }
 
 #transaction-history {
-  position: relative;;
   top: 30px;
   left: 40px;
   bottom: 15px;
   overflow: scroll !important;
+  height: 560px;
 }
 
 .collapsible {
@@ -164,10 +165,36 @@ td:first-child {
 }
 
 #feedback_areas > p > label {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 #feedback_areas {
   padding: 5px;
-  background-color: #1f3152;
+  background-color: #FFFFFF;
+}
+
+form {
+  font-size: 18px !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+#account_id {
+  float: right;
+}
+
+#account_info {
+  padding: 15px;
+}
+
+tr {
+  line-height: 0.5;
+}
+
+#chips {
+  display: inline-block;
+  float: right;
+}
+
+#textarea1 {
+  color: black;
 }

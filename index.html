@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.6/assets/css/emojione.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </hgroup>
   </head>
   <body>
@@ -83,6 +83,8 @@
                          <input type="checkbox" class="filled-in" id="verification" />
                          <label for="verification">Verification Problems</label>
                        </p>
+                       <div id="chips">
+                       </div>
                       <div class="file-field input-field">
                         <div class="btn">
                           <span>File</span>
@@ -109,7 +111,7 @@
               <div class="row">
                 <div class="card" id="account-information">
                   <div class="card-content">
-                    <span class="card-title">Account Information</span>
+                    <span class="card-title" id="account_info">Account Information</span>
                       <table>
                         <tbody>
                           <tr>
@@ -127,9 +129,9 @@
               <div class="row">
                 <div class="card" id="transaction-history">
                   <div class="card-content">
-                    <span class="card-title">Transaction History</span>
-                    <ul class="collapsible popout" id="transactions" data-collapsible="accordion">
-                    </ul>
+                      <span class="card-title" id="transaction_history">Transaction History</span>
+                      <ul class="collapsible popout" id="transactions" data-collapsible="accordion">
+                      </ul>
                   </div>
                 </div>
               </div>
